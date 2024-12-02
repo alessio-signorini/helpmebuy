@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/mobile.css" media="screen and (max-width: 768px)">
     <script type="module">
-        import { BASE_URL } from './js/config.js';
+        import { BASE_URL, getCurrentCategory, formatCategoryName, getFullProductName } from './js/config.js';
         
         // Handle GitHub Pages SPA redirect
         (function() {
@@ -23,6 +23,20 @@
                 window.location.href = BASE_URL + '/washer';
             }
         })();
+
+        // Update category-specific text when DOM is loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            const category = getCurrentCategory();
+            const headerTitle = document.querySelector('.questions-header h2');
+            const headerText = document.querySelector('.questions-header p');
+            
+            if (headerTitle) {
+                headerTitle.textContent = `Find Your Perfect ${formatCategoryName(category)}`;
+            }
+            if (headerText) {
+                headerText.textContent = `Answer a few simple questions and we'll recommend the best ${getFullProductName(category).toLowerCase()} for your needs.`;
+            }
+        });
     </script>
 </head>
 <body>
@@ -41,8 +55,8 @@
     <div class="container">
         <!-- Questions header -->
         <div class="questions-header">
-            <h2>Find Your Perfect Washer</h2>
-            <p>Answer a few simple questions and we'll recommend the best washing machine for your needs.</p>
+            <h2>Find Your Perfect Product</h2>
+            <p>Answer a few simple questions and we'll recommend the best product for your needs.</p>
         </div>
 
         <!-- Main content area -->

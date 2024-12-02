@@ -19,3 +19,18 @@ export function getCurrentCategory() {
     const pathWithoutBase = path.replace(BASE_URL, '');
     return pathWithoutBase.split('/')[1] || 'washer';
 }
+
+// Format category name for display (e.g., "washer" -> "Washer")
+export function formatCategoryName(category = getCurrentCategory()) {
+    return category.charAt(0).toUpperCase() + category.slice(1);
+}
+
+// Get full product name (e.g., "washer" -> "Washing Machine")
+export function getFullProductName(category = getCurrentCategory()) {
+    const productNames = {
+        'washer': 'Washing Machine',
+        'dryer': 'Clothes Dryer',
+        // Add more mappings as needed
+    };
+    return productNames[category] || formatCategoryName(category);
+}
