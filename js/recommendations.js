@@ -1,8 +1,8 @@
 // Recommendations handling module
-import { getResourcePath } from './config.js';
+import { getResourcePath, getCurrentCategory } from './config.js';
 
 let products = [];
-let currentCategory = window.location.pathname.split('/')[1] || 'washer';
+let currentCategory = getCurrentCategory();
 
 // Initialize the category based on the URL path
 function initializeCategory() {

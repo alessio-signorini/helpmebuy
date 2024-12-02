@@ -1,7 +1,7 @@
 // Questions handling module
 import { updateProgressDots, updateWasherImage } from './app.js';
 import { showRecommendations } from './recommendations.js';
-import { BASE_URL, getResourcePath } from './config.js';
+import { BASE_URL, getResourcePath, getCurrentCategory } from './config.js';
 
 let questions = [];
 let userAnswers = {};
@@ -10,9 +10,7 @@ let currentCategory = null;
 
 // Initialize the category based on the URL path
 function initializeCategory() {
-    const path = window.location.pathname;
-    const cleanPath = path.replace(BASE_URL, '');
-    currentCategory = cleanPath.split('/')[1] || 'washer'; // Default to 'washer' if no category
+    currentCategory = getCurrentCategory();
     return currentCategory;
 }
 

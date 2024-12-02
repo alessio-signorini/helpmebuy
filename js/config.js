@@ -8,5 +8,14 @@ export const BASE_URL = isLocal ? '' : '/helpmebuy';
 export function getResourcePath(path) {
     // Remove leading slash if present to avoid double slashes
     const cleanPath = path.startsWith('/') ? path.slice(1) : path;
-    return `${BASE_URL}/${cleanPath}`;
+    // Remove BASE_URL if it's already in the path to avoid duplication
+    const pathWithoutBase = cleanPath.startsWith('helpmebuy/') ? cleanPath.slice(9) : cleanPath;
+    return `${BASE_URL}/${pathWithoutBase}`;
+}
+
+// Get the current category from the URL, handling the base URL correctly
+export function getCurrentCategory() {
+    const path = window.location.pathname;
+    const pathWithoutBase = path.replace(BASE_URL, '');
+    return pathWithoutBase.split('/')[1] || 'washer';
 }
