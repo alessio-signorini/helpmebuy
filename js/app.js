@@ -27,13 +27,17 @@ export function updateProgressDots(currentQuestion) {
     }
 }
 
-// Update washer image based on current question
-export function updateWasherImage(questionNumber) {
+// Update washer image based on question index
+export function updateWasherImage(index) {
     const washerImage = document.querySelector('.washer-image');
+    if (!washerImage) return;
+
+    // Load the appropriate SVG based on the question index
+    const imageNumber = Math.min(Math.floor(index / 1), 7); // Use all available sketches (0-7)
     washerImage.style.opacity = '0';
     
     setTimeout(() => {
-        washerImage.style.backgroundImage = `url(${getResourcePath(`images/sketches/washer-${questionNumber}.svg`)})`;
+        washerImage.style.backgroundImage = `url('${getResourcePath(`images/sketches/washer/${imageNumber}.svg`)}')`;
         washerImage.style.opacity = '1';
     }, 300);
 }
