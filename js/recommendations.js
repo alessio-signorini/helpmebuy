@@ -1,10 +1,20 @@
 // Recommendations handling module
 import { getResourcePath, getCurrentCategory } from './config.js';
-import { logAllRankings } from './debug.js';
 
+let debugModule = { logAllRankings: () => {} };
 let products = [];
 let currentCategory = getCurrentCategory();
 let categoryScoring = null;
+
+// Initialize debug module
+async function initializeDebug() {
+    try {
+        debugModule = await import('./debug.js');
+    } catch (e) {
+        // Debug module not available in production
+        debugModule = { logAllRankings: () => {} };
+    }
+}
 
 // Initialize the category based on the URL path
 function initializeCategory() {
@@ -47,7 +57,7 @@ async function calculateScores(answers) {
     const scores = products.map(product => scoringModule(product, answers));
     
     // Log all rankings in development
-    logAllRankings(products, scores);
+    debugModule.logAllRankings(products, scores);
     
     return scores;
 }
@@ -128,6 +138,7 @@ async function getProductImageSource(product) {
 
 // Show recommendations in the UI
 export async function showRecommendations(answers) {
+    await initializeDebug();
     await loadProducts();
     const recommendations = await getTopRecommendations(answers);
     

@@ -1,7 +1,18 @@
 // Scoring logic specific to washers
-import { logScoringDetails } from '../../js/debug.js';
+let debugModule = { logScoringDetails: () => {} };
 
-export function calculateScore(product, answers) {
+// Initialize debug module
+async function initializeDebug() {
+    try {
+        debugModule = await import('../../js/debug.js');
+    } catch (e) {
+        // Debug module not available in production
+        debugModule = { logScoringDetails: () => {} };
+    }
+}
+
+export async function calculateScore(product, answers) {
+    await initializeDebug();
     let score = 0;
     
     // Price range (0-3 points)
@@ -30,7 +41,7 @@ export function calculateScore(product, answers) {
         score += 2;
     }
 
-    // Loading type preference (0-2 points)
+    // Loading type preference (0-3 points)
     if (answers[4] === product.attributes.type) {
         score += 3;
     }
@@ -64,7 +75,7 @@ export function calculateScore(product, answers) {
     }
 
     // Log detailed scoring info in development
-    logScoringDetails(product, answers, score);
+    debugModule.logScoringDetails(product, answers, score);
 
     return score;
 }
