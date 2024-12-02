@@ -121,7 +121,7 @@ async function getProductImageSource(product) {
     }
 
     // Otherwise, pick a placeholder image based on model number hash
-    const placeholderImages = ['1.jpg', '2.jpg', '3.jpg'];
+    const placeholderImages = ['1.jpg', '2.jpg', '3.jpg', '4.jpg'];
     const hashIndex = hashString(product.model) % placeholderImages.length;
     return getResourcePath(`images/random/${category}/${placeholderImages[hashIndex]}`);
 }
