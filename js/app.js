@@ -1,6 +1,7 @@
 // Main application logic
 import { initializeQuestions } from './questions.js';
 import { showRecommendations } from './recommendations.js';
+import { getResourcePath } from './config.js';
 
 // Initialize the application when the DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
@@ -32,7 +33,7 @@ export function updateWasherImage(questionNumber) {
     washerImage.style.opacity = '0';
     
     setTimeout(() => {
-        washerImage.style.backgroundImage = `url(images/sketches/washer-${questionNumber}.svg)`;
+        washerImage.style.backgroundImage = `url(${getResourcePath(`images/sketches/washer-${questionNumber}.svg`)})`;
         washerImage.style.opacity = '1';
     }, 300);
 }

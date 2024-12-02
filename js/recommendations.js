@@ -1,28 +1,26 @@
 // Recommendations handling module
-let products = null;
-let currentCategory = null;
+import { getResourcePath } from './config.js';
+
+let products = [];
+let currentCategory = window.location.pathname.split('/')[1] || 'washer';
 
 // Initialize the category based on the URL path
 function initializeCategory() {
-    const path = window.location.pathname;
-    currentCategory = path.split('/')[1] || 'washer'; // Default to 'washer' if no category
     return currentCategory;
 }
 
 // Load products data
 async function loadProducts() {
-    if (products === null) {
-        try {
-            const category = initializeCategory();
-            const response = await fetch(`/data/${category}/products.json`);
-            const data = await response.json();
-            products = data.products; // Access the products array from the data
-        } catch (error) {
-            console.error('Error loading products:', error);
-            products = [];
-        }
+    if (products.length > 0) return;
+    
+    try {
+        const response = await fetch(getResourcePath(`data/${currentCategory}/products.json`));
+        const data = await response.json();
+        products = data.products;
+    } catch (error) {
+        console.error('Error loading products:', error);
+        products = [];
     }
-    return products;
 }
 
 // Calculate product score based on user answers
@@ -85,7 +83,7 @@ function getHomeDepotUrl(product) {
 // Check if an image exists at the given path
 async function imageExists(imagePath) {
     try {
-        const response = await fetch(imagePath, { method: 'HEAD' });
+        const response = await fetch(getResourcePath(imagePath), { method: 'HEAD' });
         return response.ok;
     } catch {
         return false;
@@ -98,19 +96,19 @@ async function getProductImageSource(product) {
     
     // If image is specified in the product data, use that
     if (product.image) {
-        return `images/products/${category}/${product.image}`;
+        return getResourcePath(`images/products/${category}/${product.image}`);
     }
 
     // Check if model-specific image exists
     const modelImage = `${product.model}.jpg`;
-    if (await imageExists(`images/products/${category}/${modelImage}`)) {
-        return `images/products/${category}/${modelImage}`;
+    if (await imageExists(getResourcePath(`images/products/${category}/${modelImage}`))) {
+        return getResourcePath(`images/products/${category}/${modelImage}`);
     }
 
     // Otherwise, pick a random placeholder image
     const randomImages = ['1.jpg', '2.jpg', '3.jpg'];
     const randomIndex = Math.floor(Math.random() * randomImages.length);
-    return `images/random/${category}/${randomImages[randomIndex]}`;
+    return getResourcePath(`images/random/${category}/${randomImages[randomIndex]}`);
 }
 
 // Show recommendations in the UI

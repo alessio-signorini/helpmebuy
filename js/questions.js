@@ -1,5 +1,7 @@
 // Questions handling module
 import { updateProgressDots, updateWasherImage } from './app.js';
+import { showRecommendations } from './recommendations.js';
+import { BASE_URL, getResourcePath } from './config.js';
 
 let questions = [];
 let userAnswers = {};
@@ -9,7 +11,8 @@ let currentCategory = null;
 // Initialize the category based on the URL path
 function initializeCategory() {
     const path = window.location.pathname;
-    currentCategory = path.split('/')[1] || 'washer'; // Default to 'washer' if no category
+    const cleanPath = path.replace(BASE_URL, '');
+    currentCategory = cleanPath.split('/')[1] || 'washer'; // Default to 'washer' if no category
     return currentCategory;
 }
 
@@ -17,7 +20,7 @@ function initializeCategory() {
 export async function initializeQuestions() {
     try {
         const category = initializeCategory();
-        const response = await fetch(`/data/${category}/questions.json`);
+        const response = await fetch(getResourcePath(`data/${category}/questions.json`));
         const data = await response.json();
         questions = data.questions;
         showQuestion(currentQuestionIndex);
@@ -70,7 +73,6 @@ function handleOptionClick(value) {
 // Show final recommendations
 async function showFinalRecommendations() {
     try {
-        const { showRecommendations } = await import('./recommendations.js');
         await showRecommendations(userAnswers);
     } catch (error) {
         console.error('Error showing recommendations:', error);

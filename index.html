@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Selector</title>
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/mobile.css" media="screen and (max-width: 768px)">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mobile.css" media="screen and (max-width: 768px)">
 </head>
 <body>
     <!-- SVG Filters for hand-drawn effect -->
@@ -61,11 +61,12 @@
     </div>
 
     <script type="module">
+        import { BASE_URL } from './js/config.js';
         // Redirect to /washer if accessed from root
-        if (window.location.pathname === '/' || window.location.pathname === '/index.html') {
-            window.location.href = '/washer';
+        if (window.location.pathname === BASE_URL + '/' || window.location.pathname === BASE_URL + '/index.html') {
+            window.location.href = BASE_URL + '/washer';
         }
     </script>
-    <script type="module" src="/js/app.js"></script>
+    <script type="module" src="js/app.js"></script>
 </body>
 </html>
