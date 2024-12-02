@@ -1,0 +1,670 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "brand": "LG",
+      "model": "WM4000HWA",
+      "name": "4.5 cu. ft. Ultra Large Capacity Front Load Washer with AI Technology",
+      "price": 898,
+      "features": [
+        "Fits queen comforter",
+        "6 wash motions",
+        "TurboWash saves time"
+      ],
+      "attributes": {
+        "type": "front",
+        "size": "large",
+        "smart": true,
+        "efficiency": "high"
+      }
+    },
+    {
+      "id": "2",
+      "brand": "Samsung",
+      "model": "WF45T6000AW",
+      "name": "4.5 cu. ft. Front Load Washer with Vibration Reduction Technology",
+      "price": 748,
+      "features": [
+        "Super Speed wash",
+        "Active WaterJet",
+        "Vibration reduction"
+      ],
+      "attributes": {
+        "type": "front",
+        "size": "medium",
+        "smart": true,
+        "efficiency": "high"
+      }
+    },
+    {
+      "id": "3",
+      "brand": "LG",
+      "model": "WM4500HWA",
+      "name": "5.0 cu. ft. Front Load Washer with TurboWash360 and Built-In Intelligence",
+      "price": 998,
+      "features": [
+        "ThinQ AI technology",
+        "Steam cleaning",
+        "Allergiene cycle"
+      ],
+      "attributes": {
+        "type": "front",
+        "size": "large",
+        "smart": true,
+        "efficiency": "high"
+      }
+    },
+    {
+      "id": "4",
+      "brand": "Maytag",
+      "model": "MVW6505MW",
+      "name": "4.8 Cu. Ft. High-Efficiency Top Load Washer with Deep Fill Option",
+      "price": 748,
+      "features": [
+        "Deep Fill option",
+        "Quick wash cycle",
+        "Power agitator"
+      ],
+      "attributes": {
+        "type": "top",
+        "size": "large",
+        "smart": false,
+        "efficiency": "medium"
+      }
+    },
+    {
+      "id": "5",
+      "brand": "GE",
+      "model": "WL455H1WW",
+      "name": "4.5 cu. ft. Front Load Washer with OdorBlock UltraFresh Vent System",
+      "price": 598,
+      "features": [
+        "Deep Clean cycle",
+        "Precise Fill",
+        "Speed Wash"
+      ],
+      "attributes": {
+        "type": "front",
+        "size": "medium",
+        "smart": false,
+        "efficiency": "high"
+      }
+    },
+    {
+      "id": "6",
+      "brand": "Samsung",
+      "model": "WA50R5400AW",
+      "name": "5.0 cu. ft. Top Load Washer with Super Speed Wash",
+      "price": 698,
+      "features": [
+        "Self Clean+",
+        "Steam sanitize",
+        "Quiet operation"
+      ],
+      "attributes": {
+        "type": "top",
+        "size": "large",
+        "smart": true,
+        "efficiency": "high"
+      }
+    },
+    {
+      "id": "7",
+      "brand": "Whirlpool",
+      "model": "WTW4955HW",
+      "name": "4.7 cu. ft. Top Load Washer with Soaking Cycles",
+      "price": 648,
+      "features": [
+        "Pretreat Station",
+        "Built-in faucet",
+        "Quick Wash cycle"
+      ],
+      "attributes": {
+        "type": "top",
+        "size": "large",
+        "smart": false,
+        "efficiency": "medium"
+      }
+    },
+    {
+      "id": "8",
+      "brand": "LG",
+      "model": "WM4000HWA",
+      "name": "4.5 cu. ft. Compact Front Load Washer",
+      "price": 848,
+      "features": [
+        "Perfect for apartments",
+        "Quiet operation",
+        "Steam technology"
+      ],
+      "attributes": {
+        "type": "front",
+        "size": "compact",
+        "smart": true,
+        "efficiency": "high"
+      }
+    },
+    {
+      "id": "9",
+      "brand": "GE",
+      "model": "GTW845CPNDG",
+      "name": "5.0 cu. ft. Smart Front Load Energy Star Washer",
+      "price": 898,
+      "features": [
+        "SmartDispense technology",
+        "Sanitize cycle",
+        "Dynamic balancing"
+      ],
+      "attributes": {
+        "type": "front",
+        "size": "large",
+        "smart": true,
+        "efficiency": "high"
+      }
+    },
+    {
+      "id": "10",
+      "brand": "Maytag",
+      "model": "MHW5630HW",
+      "name": "5.2 cu. ft. Smart Capable Top Load Washer",
+      "price": 998,
+      "features": [
+        "Extra Power button",
+        "Deep Fill option",
+        "16-Hr Fresh Hold"
+      ],
+      "attributes": {
+        "type": "top",
+        "size": "large",
+        "smart": true,
+        "efficiency": "medium"
+      }
+    },
+    {
+      "id": "11",
+      "brand": "Samsung",
+      "model": "WF45T6200AC",
+      "name": "4.5 cu. ft. High-Efficiency Front Load Washer",
+      "price": 848,
+      "features": [
+        "Stackable design",
+        "Steam wash",
+        "Super Speed"
+      ],
+      "attributes": {
+        "type": "front",
+        "size": "medium",
+        "smart": true,
+        "efficiency": "high"
+      }
+    },
+    {
+      "id": "12",
+      "brand": "Whirlpool",
+      "model": "WTW4955HW",
+      "name": "4.3 cu. ft. High-Efficiency Traditional Top Load Washer",
+      "price": 648,
+      "features": [
+        "Simple controls",
+        "Deep water wash",
+        "Heavy duty cycle"
+      ],
+      "attributes": {
+        "type": "top",
+        "size": "medium",
+        "smart": false,
+        "efficiency": "medium"
+      }
+    },
+    {
+      "id": "13",
+      "brand": "LG",
+      "model": "WM9000HWA",
+      "name": "5.0 cu. ft. Mega Capacity Front Load Washer",
+      "price": 1298,
+      "features": [
+        "Largest capacity",
+        "Built-in water heater",
+        "TurboWash 360"
+      ],
+      "attributes": {
+        "type": "front",
+        "size": "large",
+        "smart": true,
+        "efficiency": "high"
+      }
+    },
+    {
+      "id": "14",
+      "brand": "Samsung",
+      "model": "WF53BB8700AT",
+      "name": "5.3 cu. ft. Bespoke Front Load Washer",
+      "price": 1299,
+      "features": [
+        "Customizable color panel",
+        "AI wash optimization",
+        "CleanGuard protection"
+      ],
+      "attributes": {
+        "type": "front",
+        "size": "large",
+        "smart": true,
+        "efficiency": "high"
+      }
+    },
+    {
+      "id": "15",
+      "brand": "GE Profile",
+      "model": "PFW850SPTW",
+      "name": "5.0 cu. ft. Smart Front Load Washer",
+      "price": 1199,
+      "features": [
+        "Built-in microban",
+        "Adaptive smart tech",
+        "1-step wash + dry"
+      ],
+      "attributes": {
+        "type": "front",
+        "size": "large",
+        "smart": true,
+        "efficiency": "high"
+      }
+    },
+    {
+      "id": "16",
+      "brand": "Maytag",
+      "model": "MVW6500MW",
+      "name": "4.8 cu. ft. Smart Capable Washer with Extra Power",
+      "price": 1049,
+      "features": [
+        "Commercial technology",
+        "Deep water wash",
+        "10-year warranty"
+      ],
+      "attributes": {
+        "type": "top",
+        "size": "large",
+        "smart": true,
+        "efficiency": "medium"
+      }
+    },
+    {
+      "id": "17",
+      "brand": "Samsung",
+      "model": "WW40T334DWH",
+      "name": "4.0 cu. ft. Compact Front Load Washer",
+      "price": 799,
+      "features": [
+        "Space-saving design",
+        "Super Speed wash",
+        "Self Clean+"
+      ],
+      "attributes": {
+        "type": "front",
+        "size": "compact",
+        "smart": true,
+        "efficiency": "high"
+      }
+    },
+    {
+      "id": "18",
+      "brand": "Whirlpool",
+      "model": "WTW8127LW",
+      "name": "5.3 cu. ft. Smart Top Load Washer",
+      "price": 899,
+      "features": [
+        "Load & Go dispenser",
+        "Sanitize cycle",
+        "Remote start"
+      ],
+      "attributes": {
+        "type": "top",
+        "size": "large",
+        "smart": true,
+        "efficiency": "high"
+      }
+    },
+    {
+      "id": "19",
+      "brand": "LG",
+      "model": "WKEX200HWA",
+      "name": "4.5 cu. ft. WashTower Washer",
+      "price": 1499,
+      "features": [
+        "All-in-one solution",
+        "Center control panel",
+        "TurboWash"
+      ],
+      "attributes": {
+        "type": "front",
+        "size": "medium",
+        "smart": true,
+        "efficiency": "high"
+      }
+    },
+    {
+      "id": "20",
+      "brand": "GE",
+      "model": "GFW148SSMWW",
+      "name": "3.9 cu. ft. Stackable Front Load Washer",
+      "price": 699,
+      "features": [
+        "HE sensor wash",
+        "Sanitize cycle",
+        "Quick wash option"
+      ],
+      "attributes": {
+        "type": "front",
+        "size": "compact",
+        "smart": false,
+        "efficiency": "high"
+      }
+    },
+    {
+      "id": "21",
+      "brand": "Speed Queen",
+      "model": "TR3003WN",
+      "name": "3.2 cu. ft. Commercial Grade Top Load Washer",
+      "price": 1199,
+      "features": [
+        "Commercial build",
+        "25-year life tested",
+        "Simple mechanical controls"
+      ],
+      "attributes": {
+        "type": "top",
+        "size": "medium",
+        "smart": false,
+        "efficiency": "medium"
+      }
+    },
+    {
+      "id": "22",
+      "brand": "Samsung",
+      "model": "WV60A9900AW",
+      "name": "6.0 cu. ft. FlexWash Front Load Washer",
+      "price": 1599,
+      "features": [
+        "Two washers in one",
+        "Dual temperature zones",
+        "WiFi connectivity"
+      ],
+      "attributes": {
+        "type": "front",
+        "size": "large",
+        "smart": true,
+        "efficiency": "high"
+      }
+    },
+    {
+      "id": "23",
+      "brand": "LG",
+      "model": "WM3488HW",
+      "name": "2.4 cu. ft. Compact All-In-One Washer/Dryer",
+      "price": 1499,
+      "features": [
+        "Washer and dryer combo",
+        "Ventless design",
+        "Perfect for apartments"
+      ],
+      "attributes": {
+        "type": "front",
+        "size": "compact",
+        "smart": true,
+        "efficiency": "high"
+      }
+    },
+    {
+      "id": "24",
+      "brand": "Amana",
+      "model": "NTW4516FW",
+      "name": "3.5 cu. ft. Top Load Washer",
+      "price": 499,
+      "features": [
+        "Porcelain tub",
+        "Dual action agitator",
+        "Late lid lock"
+      ],
+      "attributes": {
+        "type": "top",
+        "size": "medium",
+        "smart": false,
+        "efficiency": "medium"
+      }
+    },
+    {
+      "id": "25",
+      "brand": "GE Profile",
+      "model": "PTW900BPTW",
+      "name": "5.4 cu. ft. Smart Top Load Washer",
+      "price": 1299,
+      "features": [
+        "Smart Dispense tank",
+        "Dynamic balancing",
+        "Voice control"
+      ],
+      "attributes": {
+        "type": "top",
+        "size": "large",
+        "smart": true,
+        "efficiency": "high"
+      }
+    },
+    {
+      "id": "26",
+      "brand": "Maytag",
+      "model": "MVW18CSAGW",
+      "name": "3.8 cu. ft. Commercial Grade Washer",
+      "price": 899,
+      "features": [
+        "Industrial grade",
+        "No-nonsense controls",
+        "Heavy duty build"
+      ],
+      "attributes": {
+        "type": "top",
+        "size": "medium",
+        "smart": false,
+        "efficiency": "medium"
+      }
+    },
+    {
+      "id": "27",
+      "brand": "Samsung",
+      "model": "WF45T6200AW",
+      "name": "4.5 cu. ft. Smart Dial Front Load Washer",
+      "price": 949,
+      "features": [
+        "AI-powered dial",
+        "Auto dispense",
+        "Silent wash"
+      ],
+      "attributes": {
+        "type": "front",
+        "size": "medium",
+        "smart": true,
+        "efficiency": "high"
+      }
+    },
+    {
+      "id": "28",
+      "brand": "LG",
+      "model": "WT7405CW",
+      "name": "5.5 cu. ft. Top Load Washer",
+      "price": 849,
+      "features": [
+        "Water Plus option",
+        "ColdWash technology",
+        "4-way agitator"
+      ],
+      "attributes": {
+        "type": "top",
+        "size": "large",
+        "smart": false,
+        "efficiency": "high"
+      }
+    },
+    {
+      "id": "29",
+      "brand": "Whirlpool",
+      "model": "WTW2000HW",
+      "name": "2.8 cu. ft. Compact Top Load Washer",
+      "price": 599,
+      "features": [
+        "Compact footprint",
+        "Automatic load sensing",
+        "Deep water wash"
+      ],
+      "attributes": {
+        "type": "top",
+        "size": "compact",
+        "smart": false,
+        "efficiency": "medium"
+      }
+    },
+    {
+      "id": "30",
+      "brand": "GE",
+      "model": "GFW550SSNWW",
+      "name": "4.8 cu. ft. Smart Front Load Washer",
+      "price": 999,
+      "features": [
+        "Power Steam",
+        "Reversing door",
+        "Sanitize cycle"
+      ],
+      "attributes": {
+        "type": "front",
+        "size": "large",
+        "smart": true,
+        "efficiency": "high"
+      }
+    },
+    {
+      "id": "31",
+      "brand": "Samsung",
+      "model": "WF45T6000AW",
+      "name": "4.5 cu. ft. Front Load Washer with Vibration Reduction Technology+",
+      "price": 749,
+      "features": [
+        "Steam wash",
+        "Self clean+",
+        "Smart care troubleshooting"
+      ],
+      "attributes": {
+        "type": "front",
+        "size": "large",
+        "smart": true,
+        "efficiency": "high"
+      }
+    },
+    {
+      "id": "32",
+      "brand": "GE",
+      "model": "GTW720BSNWS",
+      "name": "4.8 cu. ft. Smart Top Load Washer with SmartDispense",
+      "price": 899,
+      "features": [
+        "SmartDispense technology",
+        "Sanitize with Oxi",
+        "WiFi connected"
+      ],
+      "attributes": {
+        "type": "top",
+        "size": "large",
+        "smart": true,
+        "efficiency": "standard"
+      }
+    },
+    {
+      "id": "33",
+      "brand": "Maytag",
+      "model": "MVW6230RHW",
+      "name": "4.7 cu. ft. Top Load Washer with Deep Fill Option",
+      "price": 799,
+      "features": [
+        "Deep fill option",
+        "PowerWash agitator",
+        "Quick wash cycle"
+      ],
+      "attributes": {
+        "type": "top",
+        "size": "large",
+        "smart": false,
+        "efficiency": "standard"
+      }
+    },
+    {
+      "id": "34",
+      "brand": "LG",
+      "model": "WM3600HWA",
+      "name": "4.5 cu. ft. Ultra Large Capacity Front Load Washer",
+      "price": 799,
+      "features": [
+        "TurboWash technology",
+        "6 motion technology",
+        "ColdWash option"
+      ],
+      "attributes": {
+        "type": "front",
+        "size": "large",
+        "smart": false,
+        "efficiency": "high"
+      }
+    },
+    {
+      "id": "35",
+      "brand": "Whirlpool",
+      "model": "WTW5057LW",
+      "name": "4.3 cu. ft. Top Load Washer with Quick Wash",
+      "price": 649,
+      "features": [
+        "Quick wash cycle",
+        "Deep water wash option",
+        "Smooth wave stainless steel basket"
+      ],
+      "attributes": {
+        "type": "top",
+        "size": "medium",
+        "smart": false,
+        "efficiency": "standard"
+      }
+    },
+    {
+      "id": "36",
+      "brand": "Samsung",
+      "model": "WA52A5500AV",
+      "name": "5.2 cu. ft. Top Load Washer with Super Speed Wash",
+      "price": 899,
+      "features": [
+        "Super Speed Wash",
+        "Active WaterJet",
+        "Deep Fill option"
+      ],
+      "attributes": {
+        "type": "top",
+        "size": "large",
+        "smart": true,
+        "efficiency": "standard"
+      }
+    },
+    {
+      "id": "37",
+      "brand": "GE",
+      "model": "GFW550SSNWW",
+      "name": "4.8 cu. ft. Front Load Washer with UltraFresh Vent",
+      "price": 999,
+      "features": [
+        "UltraFresh Vent System",
+        "Microban antimicrobial technology",
+        "Dynamic balancing technology"
+      ],
+      "attributes": {
+        "type": "front",
+        "size": "large",
+        "smart": true,
+        "efficiency": "high"
+      }
+    }
+  ]
+}

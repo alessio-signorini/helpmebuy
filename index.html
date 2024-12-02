@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Selector</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/mobile.css" media="screen and (max-width: 768px)">
+</head>
+<body>
+    <!-- SVG Filters for hand-drawn effect -->
+    <svg style="position: absolute; width: 0; height: 0;" aria-hidden="true">
+        <defs>
+            <filter id="hand-drawn" x="-20%" y="-20%" width="140%" height="140%">
+                <feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="2" result="noise"/>
+                <feDisplacementMap in="SourceGraphic" in2="noise" scale="5" />
+                <feGaussianBlur stdDeviation="0.2" />
+                <feMorphology operator="dilate" radius="0.2" />
+                <feColorMatrix type="matrix" values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 1.7 0"/>
+            </filter>
+        </defs>
+    </svg>
+    <div class="container">
+        <!-- Questions header -->
+        <div class="questions-header">
+            <h2>Find Your Perfect Washer</h2>
+            <p>Answer a few simple questions and we'll recommend the best washing machine for your needs.</p>
+        </div>
+
+        <!-- Main content area -->
+        <div class="content">
+            <!-- Left panel for progressive image -->
+            <div class="visual-panel">
+                <div class="washer-image"></div>
+                <!-- Progress indicator -->
+                <div class="progress-bar">
+                    <div class="progress-dots"></div>
+                </div>
+            </div>
+
+            <!-- Right panel for questions -->
+            <div class="question-panel">
+                <div class="question-container">
+                    <!-- Questions will be inserted here -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Results podium (initially hidden) -->
+        <div class="results-podium hidden">
+            <div class="runner-up left">
+                <!-- Second place -->
+            </div>
+            <div class="winner">
+                <!-- First place -->
+            </div>
+            <div class="runner-up right">
+                <!-- Third place -->
+            </div>
+        </div>
+    </div>
+
+    <script type="module">
+        // Redirect to /washer if accessed from root
+        if (window.location.pathname === '/' || window.location.pathname === '/index.html') {
+            window.location.href = '/washer';
+        }
+    </script>
+    <script type="module" src="/js/app.js"></script>
+</body>
+</html>

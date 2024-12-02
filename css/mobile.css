@@ -1,0 +1,37 @@
+/* Mobile-specific styles */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    .content {
+        grid-template-columns: 1fr;
+    }
+
+    .visual-panel {
+        min-height: 200px;
+    }
+
+    .question-panel {
+        padding: 1rem;
+    }
+
+    .question-container {
+        max-width: 100%;
+    }
+
+    /* Adjust podium for mobile */
+    .results-podium {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .winner {
+        order: -1;
+        transform: none;
+    }
+
+    .runner-up {
+        opacity: 1;
+    }
+}

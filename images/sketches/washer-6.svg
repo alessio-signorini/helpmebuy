@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+    <!-- Basic washer outline -->
+    <rect x="100" y="50" width="200" height="300" fill="none" stroke="#666" stroke-width="2"/>
+    <!-- Door with handle and glass -->
+    <circle cx="200" cy="200" r="80" fill="none" stroke="#666" stroke-width="2"/>
+    <circle cx="260" cy="200" r="10" fill="none" stroke="#666" stroke-width="2"/>
+    <circle cx="200" cy="200" r="75" fill="none" stroke="#999" stroke-width="1" stroke-dasharray="2,2"/>
+    <!-- Full control panel -->
+    <rect x="120" y="70" width="160" height="40" fill="none" stroke="#666" stroke-width="1"/>
+    <circle cx="140" cy="90" r="8" fill="none" stroke="#666" stroke-width="1"/>
+    <rect x="160" y="85" width="40" height="10" fill="none" stroke="#666" stroke-width="1"/>
+    <!-- Digital display -->
+    <rect x="210" y="80" width="50" height="20" fill="none" stroke="#666" stroke-width="1"/>
+    <line x1="215" y1="90" x2="255" y2="90" stroke="#666" stroke-width="1"/>
+    <!-- Detailed drum pattern -->
+    <circle cx="200" cy="200" r="70" fill="none" stroke="#666" stroke-width="1"/>
+    <path d="M200,130 L200,270 M130,200 L270,200" stroke="#999" stroke-width="1"/>
+    <path d="M165,165 L235,235 M235,165 L165,235" stroke="#999" stroke-width="1"/>
+    <!-- Cycle indicators -->
+    <text x="155" y="75" font-family="Arial" font-size="6" fill="#666">NORMAL</text>
+    <text x="155" y="82" font-family="Arial" font-size="6" fill="#666">DELICATE</text>
+</svg>

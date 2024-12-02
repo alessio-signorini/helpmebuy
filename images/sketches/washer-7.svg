@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+    <!-- Basic washer outline with shadow -->
+    <rect x="100" y="50" width="200" height="300" fill="none" stroke="#444" stroke-width="2"/>
+    <!-- Door with handle and glass -->
+    <circle cx="200" cy="200" r="80" fill="none" stroke="#444" stroke-width="2"/>
+    <circle cx="260" cy="200" r="10" fill="none" stroke="#444" stroke-width="2"/>
+    <circle cx="200" cy="200" r="75" fill="none" stroke="#666" stroke-width="1"/>
+    <!-- Smart control panel -->
+    <rect x="120" y="70" width="160" height="40" fill="none" stroke="#444" stroke-width="1"/>
+    <!-- Digital display -->
+    <rect x="130" y="75" width="140" height="30" fill="none" stroke="#444" stroke-width="1"/>
+    <line x1="135" y1="90" x2="265" y2="90" stroke="#666" stroke-width="1"/>
+    <!-- WiFi indicator -->
+    <path d="M180,80 Q190,70 200,80 Q210,70 220,80" fill="none" stroke="#666" stroke-width="1"/>
+    <!-- Detailed drum pattern -->
+    <circle cx="200" cy="200" r="70" fill="none" stroke="#444" stroke-width="1.5"/>
+    <path d="M200,130 L200,270 M130,200 L270,200" stroke="#666" stroke-width="1"/>
+    <path d="M165,165 L235,235 M235,165 L165,235" stroke="#666" stroke-width="1"/>
+    <!-- Smart features -->
+    <text x="140" y="85" font-family="Arial" font-size="6" fill="#666">SMART CONTROL</text>
+    <!-- Additional details -->
+    <rect x="100" y="345" width="200" height="5" fill="none" stroke="#666" stroke-width="1"/>
+</svg>

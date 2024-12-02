@@ -1,0 +1,278 @@
+/* Base styles */
+:root {
+    --primary-color: #007AFF;
+    --background-color: #FFFFFF;
+    --text-color: #1D1D1F;
+    --secondary-text: #86868B;
+    --transition-time: 0.3s;
+    --light-gray: #E0E0E0;
+    --accent-color: var(--primary-color);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.5;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    min-height: 100vh;
+}
+
+/* Progress bar */
+.progress-bar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0 1rem;
+}
+
+.progress-dots {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--light-gray);
+    transition: all var(--transition-time) ease;
+}
+
+.dot.completed {
+    background-color: var(--primary-color);
+}
+
+.dot.current {
+    background-color: var(--primary-color);
+    transform: scale(1.5);
+}
+
+/* Main content layout */
+.content {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    padding: 0 1rem;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Visual panel */
+.visual-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    min-height: 480px;
+    padding: 2rem;
+}
+
+.washer-image {
+    width: 360px;
+    height: 360px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: all var(--transition-time) ease-in-out;
+    filter: url(#hand-drawn);
+    mix-blend-mode: darken;
+    opacity: 0.9;
+}
+
+/* Question panel */
+.question-panel {
+    padding: 2rem;
+}
+
+.question-container {
+    max-width: 400px;
+}
+
+/* Questions header */
+.questions-header {
+    text-align: center;
+    margin: 2rem 0;
+    padding: 0 1rem;
+}
+
+.questions-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.questions-header p {
+    font-size: 1.2rem;
+    color: var(--secondary-text);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.5;
+}
+
+/* Option buttons */
+.option-button {
+    width: 100%;
+    padding: 1rem;
+    margin: 0.5rem 0;
+    background: none;
+    border: 1px solid var(--text-color);
+    border-radius: 8px;
+    font-size: 1rem;
+    text-align: left;
+    cursor: pointer;
+    transition: all var(--transition-time) ease;
+}
+
+.option-button:hover {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+/* Results podium */
+.results-podium {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr 1fr;
+    gap: 2rem;
+    align-items: flex-end;
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+.runner-up, .winner {
+    background: white;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.runner-up:hover, .winner:hover {
+    transform: translateY(-10px);
+}
+
+.winner {
+    padding-bottom: 3rem;
+    margin-top: -2rem;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.results-podium img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1.5rem;
+    object-fit: contain;
+}
+
+.product-info {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 400px;
+}
+
+.product-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+.product-name {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+    line-height: 1.4;
+    height: 3em;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+}
+
+.model-number {
+    font-size: 0.9rem;
+    color: var(--secondary-text);
+    margin-bottom: 1rem;
+}
+
+.price {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin: 1rem 0;
+}
+
+.product-info ul {
+    list-style: none;
+    margin: 1.5rem 0;
+    text-align: left;
+    padding: 0 1rem;
+    flex-grow: 1;
+}
+
+.product-info li {
+    margin: 0.5rem 0;
+    font-size: 0.95rem;
+    color: var(--text-color);
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.product-info li:before {
+    content: "•";
+    color: var(--primary-color);
+    position: absolute;
+    left: 0;
+}
+
+.buy-now, .view-details {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    margin-top: auto;
+    transition: background-color var(--transition-time) ease;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Recommendations header */
+.recommendations-header {
+    text-align: center;
+    margin: 2rem 0;
+    padding: 0 1rem;
+}
+
+.recommendations-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.recommendations-header p {
+    font-size: 1.2rem;
+    color: var(--secondary-text);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.5;
+}

@@ -1,0 +1,138 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "text": "How much would you like to spend?",
+      "options": [
+        {
+          "text": "Up to $600",
+          "value": "budget"
+        },
+        {
+          "text": "Up to $900",
+          "value": "mid_range"
+        },
+        {
+          "text": "Up to $1,200",
+          "value": "premium"
+        },
+        {
+          "text": "Money is not a concern",
+          "value": "luxury"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "text": "Where will your washer go?",
+      "options": [
+        {
+          "text": "Standard laundry room or space",
+          "value": "standard"
+        },
+        {
+          "text": "Small closet or tight space",
+          "value": "compact"
+        },
+        {
+          "text": "I'm not sure about the space yet",
+          "value": "unknown"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "text": "How much laundry do you typically do?",
+      "options": [
+        {
+          "text": "A few loads per week (1-2 people)",
+          "value": "small"
+        },
+        {
+          "text": "A load almost every day (small family)",
+          "value": "medium"
+        },
+        {
+          "text": "Multiple loads daily (large family)",
+          "value": "large"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "text": "Which style is easier for you to use?",
+      "options": [
+        {
+          "text": "Top door (like a traditional washer)",
+          "value": "top"
+        },
+        {
+          "text": "Front door (like ones you see in laundromats)",
+          "value": "front"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "text": "What matters most to you?",
+      "options": [
+        {
+          "text": "Saving money on water and electricity bills",
+          "value": "efficiency"
+        },
+        {
+          "text": "Getting clothes really clean",
+          "value": "performance"
+        },
+        {
+          "text": "Finishing laundry quickly",
+          "value": "speed"
+        },
+        {
+          "text": "Washer that's simple to use",
+          "value": "simplicity"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "text": "What type of clothes do you wash most often?",
+      "options": [
+        {
+          "text": "Everyday clothes (t-shirts, jeans, etc.)",
+          "value": "everyday"
+        },
+        {
+          "text": "Lots of delicates (silk, wool, fancy clothes)",
+          "value": "delicates"
+        },
+        {
+          "text": "Work clothes that get very dirty",
+          "value": "heavy_duty"
+        },
+        {
+          "text": "Mix of everything",
+          "value": "mixed"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "text": "Would you like to control your washer with your smartphone?",
+      "options": [
+        {
+          "text": "Yes, that would be helpful",
+          "value": "smart"
+        },
+        {
+          "text": "No, I prefer simple buttons and dials",
+          "value": "basic"
+        },
+        {
+          "text": "I'm not sure",
+          "value": "either"
+        }
+      ]
+    }
+  ]
+}
