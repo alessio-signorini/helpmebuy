@@ -1,5 +1,5 @@
 // Questions handling module
-import { updateProgressDots, updateWasherImage } from './app.js';
+import { updateProgressDots, updateProductImage } from './app.js';
 import { showRecommendations } from './recommendations.js';
 import { BASE_URL, getResourcePath, getCurrentCategory } from './config.js';
 
@@ -53,7 +53,7 @@ export function showQuestion(questionIndex) {
     });
 
     updateProgressDots(questionIndex);
-    updateWasherImage(questionIndex);
+    updateProductImage(questionIndex);
 }
 
 // Handle option click

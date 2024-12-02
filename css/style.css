@@ -37,9 +37,12 @@ body {
     padding: 0 1rem;
 }
 
+/* Progress dots */
 .progress-dots {
     display: flex;
     gap: 0.5rem;
+    margin-top: 20px;
+    justify-content: center;
 }
 
 .dot {
@@ -80,7 +83,7 @@ body {
     padding: 2rem;
 }
 
-.washer-image {
+.product-image {
     width: 360px;
     height: 360px;
     background-size: contain;
