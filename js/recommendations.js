@@ -1,8 +1,10 @@
 // Recommendations handling module
 import { getResourcePath, getCurrentCategory } from './config.js';
+import { logAllRankings } from './debug.js';
 
 let products = [];
 let currentCategory = getCurrentCategory();
+let categoryScoring = null;
 
 // Initialize the category based on the URL path
 function initializeCategory() {
@@ -23,49 +25,51 @@ async function loadProducts() {
     }
 }
 
-// Calculate product score based on user answers
-function calculateProductScore(product, answers) {
-    let score = 0;
+// Load category-specific scoring module
+async function loadCategoryScoring() {
+    if (categoryScoring) return categoryScoring;
     
-    // Price range
-    const priceRanges = {
-        'budget': [0, 600],
-        'mid_range': [601, 900],
-        'premium': [901, 1200],
-        'luxury': [1201, Infinity]
-    };
-    const userPriceRange = priceRanges[answers[1]];
-    if (product.price >= userPriceRange[0] && product.price <= userPriceRange[1]) {
-        score += 3;
+    try {
+        const module = await import(getResourcePath(`data/${currentCategory}/scoring.js`));
+        categoryScoring = module.calculateScore;
+        return categoryScoring;
+    } catch (error) {
+        console.error('Error loading scoring module:', error);
+        // Fallback scoring function that gives all products equal scores
+        return () => 50;
     }
+}
 
-    // Loading type preference
-    if (product.attributes.type === answers[4]) {
-        score += 2;
-    }
+// Calculate scores for all products
+async function calculateScores(answers) {
+    const products = await loadProducts();
+    const scoringModule = await loadCategoryScoring();
+    const scores = products.map(product => scoringModule(product, answers));
+    
+    // Log all rankings in development
+    logAllRankings(products, scores);
+    
+    return scores;
+}
 
-    // Size preference
-    if (answers[2] === 'compact' && product.attributes.size === 'compact') {
-        score += 2;
-    }
-
-    // Smart features
-    if (answers[7] === 'smart' && product.attributes.smart) {
-        score += 2;
-    } else if (answers[7] === 'basic' && !product.attributes.smart) {
-        score += 2;
-    }
-
-    return score;
+// Calculate product score based on user answers
+async function calculateProductScore(product, answers) {
+    const scoringFunction = await loadCategoryScoring();
+    return scoringFunction(product, answers);
 }
 
 // Get top 3 recommendations
-function getTopRecommendations(answers) {
-    return products
-        .map(product => ({
+async function getTopRecommendations(answers) {
+    // Calculate all scores in parallel
+    const productsWithScores = await Promise.all(
+        products.map(async product => ({
             ...product,
-            score: calculateProductScore(product, answers)
+            score: await calculateProductScore(product, answers)
         }))
+    );
+    
+    // Sort by score and take top 3
+    return productsWithScores
         .sort((a, b) => b.score - a.score)
         .slice(0, 3);
 }
@@ -90,6 +94,17 @@ async function imageExists(imagePath) {
     }
 }
 
+// Generate a consistent number from a string
+function hashString(str) {
+    let hash = 0;
+    for (let i = 0; i < str.length; i++) {
+        const char = str.charCodeAt(i);
+        hash = ((hash << 5) - hash) + char;
+        hash = hash & hash; // Convert to 32-bit integer
+    }
+    return Math.abs(hash);
+}
+
 // Get image source for a product
 async function getProductImageSource(product) {
     const category = currentCategory;
@@ -105,16 +120,16 @@ async function getProductImageSource(product) {
         return getResourcePath(`images/products/${category}/${modelImage}`);
     }
 
-    // Otherwise, pick a random placeholder image
-    const randomImages = ['1.jpg', '2.jpg', '3.jpg'];
-    const randomIndex = Math.floor(Math.random() * randomImages.length);
-    return getResourcePath(`images/random/${category}/${randomImages[randomIndex]}`);
+    // Otherwise, pick a placeholder image based on model number hash
+    const placeholderImages = ['1.jpg', '2.jpg', '3.jpg'];
+    const hashIndex = hashString(product.model) % placeholderImages.length;
+    return getResourcePath(`images/random/${category}/${placeholderImages[hashIndex]}`);
 }
 
 // Show recommendations in the UI
 export async function showRecommendations(answers) {
     await loadProducts();
-    const recommendations = getTopRecommendations(answers);
+    const recommendations = await getTopRecommendations(answers);
     
     // Hide question panels, progress bar, and questions header
     document.querySelector('.content').style.display = 'none';
