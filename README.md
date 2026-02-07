@@ -1,4 +1,4 @@
-# Washing Machine Selector
+# 🛍️ HelpMeBuy
 
 An Apple-inspired web application to help users find their perfect washing machine. The interface guides users through simple questions to recommend the best washing machine for their needs.
 
